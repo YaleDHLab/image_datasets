@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup (
-  name='image-datasets',
+  name='image_datasets',
   version='0.0.1',
   packages=['image_datasets'],
   keywords = ['computer-vision', 'machine-learning', 'datasets'],

@@ -16,7 +16,7 @@ To list all available datasets:
 
 ```python
 import image_datasets
-image_datasets.list()
+image_datasets.list() # returns a list of names ['oslo', 'bain', ...]
 ```
 
 To download the "bain" dataset:

@@ -7,3 +7,4 @@ dist
 *.tar.gz
 __pycache__
 datasets
+*.egg-info

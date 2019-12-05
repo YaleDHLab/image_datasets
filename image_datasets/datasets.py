@@ -11,6 +11,12 @@ oslo = Dataset(
   metadata_path=hosts['pixplot'] + '/oslo/metadata.csv',
 )
 
+oslomini = Dataset(
+  name='oslomini',
+  image_path=hosts['pixplot'] + '/oslomini/photos.tar',
+  metadata_path=hosts['pixplot'] + '/oslomini/metadata.csv',
+)
+
 bain = Dataset(
   name='bain',
   image_path=hosts['pixplot'] + '/bain/photos.tar',
@@ -18,4 +24,4 @@ bain = Dataset(
 )
 
 def list_all():
-  return ['oslo', 'bain']
+  return ['oslo', 'oslomini', 'bain']

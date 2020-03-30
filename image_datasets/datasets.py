@@ -17,6 +17,12 @@ oslomini = Dataset(
   metadata_path=hosts['pixplot'] + '/oslomini/metadata.csv',
 )
 
+fsaowi_ct = Dataset(
+  name='fsaowi_ct',
+  image_path=hosts['pixplot'] + '/fsaowi_ct/images.tar',
+  metadata_path=hosts['pixplot'] + '/fsaowi_ct/metadata.csv',
+)
+
 bain = Dataset(
   name='bain',
   image_path=hosts['pixplot'] + '/bain/photos.tar',

@@ -23,6 +23,12 @@ fsaowi_ct = Dataset(
   metadata_path=hosts['pixplot'] + '/fsaowi_ct/metadata.csv',
 )
 
+ycba = Dataset(
+  name='ycba',
+  image_path=hosts['pixplot'] + '/ycba/images.tar',
+  metadata_path=hosts['pixplot'] + '/ycba/metadata.csv',
+)
+
 bain = Dataset(
   name='bain',
   image_path=hosts['pixplot'] + '/bain/photos.tar',

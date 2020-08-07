@@ -19,9 +19,10 @@ class Dataset:
       if not os.path.exists(out_path):
         os.makedirs(out_path)
     # download metadata
-    print(' * downloading {} metadata from {}'.format(self.name, self.metadata_path))
-    metadata_path = os.path.join(self.out_dir, 'metadata', 'metadata.csv')
-    self.save(metadata_path, self.metadata_path, blocksize=blocksize)
+    if self.metadata_path:
+      print(' * downloading {} metadata from {}'.format(self.name, self.metadata_path))
+      metadata_path = os.path.join(self.out_dir, 'metadata', 'metadata.csv')
+      self.save(metadata_path, self.metadata_path, blocksize=blocksize)
     # download the images
     print(' * downloading {} images from {}'.format(self.name, self.image_path))
     image_dir = os.path.join(self.out_dir, 'images')
@@ -38,7 +39,7 @@ class Dataset:
           shutil.move(i, os.path.join(image_dir, os.path.basename(i)))
     self.delete(image_path)
 
-  def save(self, path, url, blocksize=10**11):
+  def save(self, path, url, blocksize=2**10):
     '''Save the content at `url` locally at `path`'''
     if not os.path.exists(path):
       with open(path, 'wb') as out:

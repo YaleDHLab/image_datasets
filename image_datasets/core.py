@@ -3,6 +3,8 @@ from keras_preprocessing.image.utils import load_img, img_to_array
 import requests, os, tarfile, shutil, glob2
 import numpy as np
 
+default_blocksize = 2**10
+
 class Dataset:
   def __init__(self, *args, **kwargs):
     '''Create a new dataset object'''
@@ -12,7 +14,7 @@ class Dataset:
     self.out_dir = os.path.join(os.getcwd(), 'datasets', self.name)
     self.image_extensions = ['.jpg', '.png']
 
-  def download(self, flatten=False, blocksize=10**11):
+  def download(self, flatten=False, blocksize=default_blocksize):
     '''Download the dataset to local disk'''
     for i in ['metadata', 'images']:
       out_path = os.path.join(self.out_dir, i)
@@ -39,7 +41,7 @@ class Dataset:
           shutil.move(i, os.path.join(image_dir, os.path.basename(i)))
     self.delete(image_path)
 
-  def save(self, path, url, blocksize=2**10):
+  def save(self, path, url, blocksize=default_blocksize):
     '''Save the content at `url` locally at `path`'''
     if not os.path.exists(path):
       with open(path, 'wb') as out:

@@ -35,5 +35,11 @@ si_open_access = Dataset(
   metadata_path=None,
 )
 
+ycba = Dataset(
+  name='ycba',
+  image_path=hosts['pixplot'] + '/ycba/images.tar',
+  metadata_path=hosts['pixplot'] + '/ycba/metadata.csv',
+)
+
 def list_all():
   return ['bain', 'fsaowi_ct', 'oslo', 'oslomini', 'si_open_access']

@@ -6,7 +6,7 @@ setup (
   packages=['image_datasets'],
   keywords = ['computer-vision', 'machine-learning', 'datasets'],
   description='Image datasets for computer vision projects',
-  url='https://github.com/yale-dhlab/image_datasets',
+  url='https://github.com/yaledhlab/image_datasets',
   author='Douglas Duhaime',
   author_email='douglas.duhaime@gmail.com',
   license='MIT',

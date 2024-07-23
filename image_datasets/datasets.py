@@ -2,7 +2,8 @@ from image_datasets.core import Dataset
 import sys
 
 hosts = {
-  'pixplot': 'http://pixplot.yale.edu/datasets'
+  'pixplot': 'http://pixplot.yale.edu/datasets',
+  'duhaime': 'https://duhaime.s3.amazonaws.com/yale-dh-lab/image-datasets'
 }
 
 bain = Dataset(
@@ -19,14 +20,14 @@ fsaowi_ct = Dataset(
 
 oslo = Dataset(
   name='oslo',
-  image_path=hosts['pixplot'] + '/oslo/photos.tar',
-  metadata_path=hosts['pixplot'] + '/oslo/metadata.csv',
+  image_path=hosts['duhaime'] + '/oslo/images.tar',
+  metadata_path=hosts['duhaime'] + '/oslo/metadata.csv',
 )
 
 oslomini = Dataset(
   name='oslomini',
-  image_path=hosts['pixplot'] + '/oslomini/photos.tar',
-  metadata_path=hosts['pixplot'] + '/oslomini/metadata.csv',
+  image_path=hosts['duhaime'] + '/oslomini/images.tar',
+  metadata_path=hosts['duhaime'] + '/oslomini/metadata.csv',
 )
 
 si_open_access = Dataset(
